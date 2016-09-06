@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignent 7.4</title>
+
+<script>
+        function test(event) {
+                var x = event.clientX;
+                var y = event.clientY;
+                var dt = Date();
+                var coords = "X: " + x + "; Y: " + y + "; Time: " + dt;
+                document.getElementById("demo").innerHTML += coords + "<br>";
+        }
+
+        function clear() {
+                console.log("cl");
+                document.getElementById("demo").innerHTML = "";
+        }
+</script>
+
+</head>
+<body>
+        <textarea cols="20" rows="10" onmousemove="test(event)" onmouseout="clear()">
+        </textarea>
+        <p id="demo"></p>
+</body>
+</html>
